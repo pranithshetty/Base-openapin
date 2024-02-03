@@ -15,7 +15,7 @@ const tagOptions = [
 const Table = ({ data, error, headers }) => {
 	const [tags, setTags] = useState([]);
 	const handleChange = (e) => {
-		console.log(e.taget.value);
+		console.log(e.target.value);
 		// setTags(e.target.value);
 	};
 	// console.log(
