@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import LoginForm from "../pages/LoginForm";
 import PcLeftLogin from "../assets/PcLeftLogin.svg";
 //import Socials from "../assets/Socials.svg";
-import BrandName from "../assets/Base.png";
+import BrandName from "../assets/BASE.png";
 //port BrandLogo from "../assets/BrandLogo.svg";
 const Login = () => {
 	const navigate = useNavigate();
