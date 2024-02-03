@@ -3,9 +3,9 @@ import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../pages/LoginForm";
 import PcLeftLogin from "../assets/PcLeftLogin.svg";
-import Socials from "../assets/Socials.svg";
+//import Socials from "../assets/Socials.svg";
 import BrandName from "../assets/Base.png";
-import BrandLogo from "../assets/BrandLogo.svg";
+//port BrandLogo from "../assets/BrandLogo.svg";
 const Login = () => {
 	const navigate = useNavigate();
 
