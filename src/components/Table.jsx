@@ -11,10 +11,13 @@ const tagOptions = [
 	"Health",
 	"Education",
 	"Finance",
-	"Art",
 ];
 const Table = ({ data, error, headers }) => {
-	const [tags, setTags] = useState([...new Set(tagOptions)]);
+	const [tags, setTags] = useState([]);
+	const handleChange = (e) => {
+		console.log(e.taget.value);
+		// setTags(e.target.value);
+	};
 	// console.log(
 	// 	data.slice(1).map((item, i) => {
 	// 		return item.slice(3, -1).map((itm, i) => {
@@ -22,14 +25,6 @@ const Table = ({ data, error, headers }) => {
 	// 		});
 	// 	})
 	// );
-	// useEffect(() => {
-	// 	// let res = data.slice(1).map((item, i) => {
-	// 	// 	return item.slice(3, -1).map((itm, i) => {
-	// 	// 		return itm.split(",");
-	// 	// 	});
-	// 	// });
-	// 	setTags([...tagOptions]);
-	// }, []);
 
 	return (
 		<div className="">
@@ -65,11 +60,12 @@ const Table = ({ data, error, headers }) => {
 												id="tags"
 												defaultValue="Select tags"
 												className="border-none"
+												onChange={handleChange}
 											>
 												<option className="" disabled hidden>
 													Select tags
 												</option>
-												{tags.map((tag, idx) => {
+												{[...new Set(tagOptions)].map((tag, idx) => {
 													return (
 														<option value={tag} key={tag + "" + idx}>
 															{tag}
